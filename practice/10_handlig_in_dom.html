@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valhalla</title>
+</head>
+<body style="background-color: #212122; color: #fff">
+    <div class="viking">
+        <div class="heros">Ragnar<br></div>
+        <div class="heros">Bjorn<br></div>
+        <div class="heros">Rollo<br></div>
+        <div class="heros">Ivor<br></div>
+    </div>
+</body>
+<script>
+    const bodyHandle = document.querySelector('.viking')
+    bodyHandle.style.border = "2px solid white";
+
+
+    const handleHeros = document.querySelectorAll('.heros')
+    handleHeros.forEach( (items) => {
+        items.style.border = "2px solid white";
+    } )
+
+    handleHeros[0].style.backgroundColor = "green"
+    handleHeros[1].style.backgroundColor = "red"
+    handleHeros[2].style.backgroundColor = "orange"
+    handleHeros[3].style.backgroundColor = "blue"
+
+    const addText1 = document.createTextNode("Ragnar Lothbrok was a 9th-century Danish Viking king and warrior known for his exploits, for his death in a snake pit at the hands of Aella of Northumbria, and for being the father of Halfdan, Ivar the Boneless, and Hubba, who led an invasion of East Anglia in 865.")
+    handleHeros[0].appendChild(addText1)
+
+    const addText2 = document.createTextNode("Björn Ironside was indeed the son of Ragnar Lothbrok, but not with shieldmaiden Lagertha. He was the son of Ragnar Lothbrok and of Aslaug")
+    handleHeros[1].appendChild(addText2)
+
+    const addText3 = document.createTextNode("Rollo was a Viking who, as Count of Rouen, became the first ruler of Normandy, today a region in northern France. ")
+    handleHeros[2].appendChild(addText3)
+
+    const addText4 = document.createTextNode("Ivar Ragnarsson, more commonly known as Ivar the Boneless, was a Viking warrior who lived from 794 or 830 to 873 C.E. One of the three sons of famed Viking king Ragnar Lodbrok, Ivar the Boneless, was a real Viking warrior and ruler who derived his nickname from one of several different explanations")
+    handleHeros[3].appendChild(addText4)
+
+    
+    
+</script>
+</html>
