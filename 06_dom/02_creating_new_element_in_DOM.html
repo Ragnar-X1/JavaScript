@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Valhalla</title>
+</head>
+<body style="background-color: #212121; color:white">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const classHolder = document.querySelector('.parent')
+    // console.log(classHolder)
+    // console.log(classHolder.children) // Classes inside it
+    // console.log(classHolder.children[1].innerText);
+
+    // for (let i = 0; i<classHolder.children.length; i++){
+    //     console.log(classHolder.children[i].innerText)
+    // }
+
+    // console.log(classHolder.firstElementChild)
+    // console.log(classHolder.lastElementChild)
+
+    const dayHolder = document.querySelector('.day')
+    // console.log(dayHolder.parentElement)
+    // console.log(dayHolder.nextElementSibling)
+
+    console.log("Nodes: ", classHolder.childNodes);
+
+
+
+
+</script>
+</html>
