@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vlahalla</title>
+</head>
+<body style="background-color:#212121; color:#fff">
+    <ul class="vikings">
+        <li>Ragnar Lothbrook</li>
+    </ul>
+</body>
+
+<script>
+    
+    function addHeros(HeroName) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(HeroName))
+        document.querySelector('.vikings').appendChild(li) 
+    }
+
+    addHeros("Bjorn")
+    addHeros("Ivor")
+
+</script>
+</html>
