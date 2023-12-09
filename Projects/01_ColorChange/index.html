@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Change</title>
+    <style>
+        body{
+            background-color: #212121;
+            color: #fff;
+            text-align: center;
+        }
+
+        .canvas{
+            border: 2px solid black;
+            padding: 10px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .button{
+            border: 2px solid black;
+            text-decoration: none;
+            border-radius: 10px;
+            padding: 10px 30px;
+            margin-right: 4px;
+        }
+
+        #grey{
+            background-color: grey;
+        }
+
+        #white{
+            background-color: white;
+        }
+
+        #blue{
+            background-color: blue;
+        }
+
+        #yellow{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="canvas">
+        <h2>Color Scheme Switcher</h2>
+        <span class="button" id="grey"></span>
+        <span class="button" id="white"></span>
+        <span class="button" id="blue"></span>
+        <span class="button" id="yellow"></span>
+        <h3>Try Clicking on the colored box to change the body color</h3>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
