@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Edit and Remove</title>
+</head>
+<body style="background-color: #212121; color: #fff">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    
+    // Here I am creating a function which add new items to th list 
+
+    //Not Optimised
+    // function addLanguage(langName) {
+    //     const li = document.createElement('li')
+    //     li.innerHTML = `${langName}`
+    //     const addToLanguage = document.querySelector('.language')
+    //     addToLanguage.appendChild(li)
+    // }
+
+
+    //Optimised
+    // function addLanguage(langName) {
+    //     const li = document.createElement('div')
+    //     const addText = document.createTextNode(langName)
+    //     li.appendChild(addText)
+    //     const addToLanguage = document.querySelector('.language')
+    //     addToLanguage.appendChild(li)
+    // }
+
+
+    // Full Optimised
+    function addLanguage(langName) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addLanguage("Python")
+    addLanguage("React")
+    addLanguage("Swift")
+    addLanguage("Ruby")
+    addLanguage("Edverd")
+
+
+
+    // Editing the element 
+    // i) Target the element which is to be replaced or edited
+    // ii) Create new element 
+    // iii) Give the content/text using textContent
+    // iv) Use replaceWith to replace the content
+    const lastLang = document.querySelector('li:nth-child(4)')
+    const newLi = document.createElement('li')
+    newLi.textContent = "Nextjs"
+    lastLang.replaceWith(newLi)
+
+
+    //Editing the element
+    // i) Target the element to be replaced
+    // ii) Use these following to bring out the text and change it
+    const lastLang2 = document.querySelector('li:nth-child(5)')
+    // lastLang2.innerText = "SQL"
+    // lastLang2.innerHTML = "SQL"
+    lastLang2.outerHTML = "<li>SQL</li>"
+
+
+
+    // Deleting/Removing the Element 
+    const rmLast = document.querySelector('li:last-child')
+    rmLast.remove()
+    
+</script>
+</html>
