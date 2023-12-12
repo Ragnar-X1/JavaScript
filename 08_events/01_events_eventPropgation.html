@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events html</title>
+</head>
+<body style="background-color: #212121; color:white;">
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+            
+            <li><img width="200px" id="chameleon" src="https://images.pexels.com/photos/62289/yemen-chameleon-chamaeleo-calyptratus-chameleon-reptile-62289.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></li>
+
+            <li><img id="horse" width="200px" src="https://images.pexels.com/photos/1996337/pexels-photo-1996337.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></li>
+
+            <li><img id="mustang" width="200px" src="https://images.pexels.com/photos/14685066/pexels-photo-14685066.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></li>
+            
+            <li><img id="mt09" width="200px" src="https://images.pexels.com/photos/15887145/pexels-photo-15887145/free-photo-of-biker-sitting-on-yamaha-mt-09.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></li>
+
+            <li><a style="color: aliceblue;" id="google" href="https://www.google.com">Google</a></li>
+            
+        </ul>
+    </div>
+</body>
+
+<script>
+    // document.getElementById('mt09').onclick = function(){
+    //     alert("It's an MT-09 Yamaha bike")
+    // }
+
+    //It is also same but it's a better approach
+
+    // document.querySelector('#mt09').addEventListener('click', () => {
+    //     alert("It's a Yamaha MT-09 bike")
+    // })
+
+
+
+    //EVENT PROPOGATION
+    // 2 Types 
+    // i) Bubbling => first inner and then outer (It is false(default))
+    // ii) Capturing => first outer and then inside(It's true)
+    // NOTE: Event Listener takes 3 arguments (event, function, propogation(false or ture))
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("It's in ul")
+    // },false)
+
+    // document.querySelector('#mustang').addEventListener('click', function(e){
+    //     console.log("It's in mustang")
+    //     e.stopPropagation();
+    // },false)
+
+
+
+    //PREVENT DEFAULT
+
+    document.querySelector('#google').addEventListener('click', (e) => {
+        console.log("Google is clicked")
+        e.preventDefault();
+        e.stopPropagation(); // It stops the bubbling Propagation
+    },false)
+
+
+
+
+
+    //Program to remove the images after clicking on them
+
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e);
+        // console.log(e.target.parentNode);
+
+        console.log(e.target.tagName)
+
+        if(e.target.tagName === "IMG"){
+
+            // const removeit = e.target.parentNode;
+            // removeit.remove();
+
+            e.target.parentNode.remove();
+        }
+        
+    })
+
+</script>
+
+</html>
