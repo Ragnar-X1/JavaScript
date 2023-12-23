@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valhalla</title>
+</head>
+<body>
+    <h3>Valhalla</h3>
+    <button id="stop">Stop</button>
+
+</body>
+
+<script>
+    const stop = document.querySelector('#stop')
+
+    // setTimeout(function(){
+    //     document.querySelector('h3').innerHTML = `Valhalla Vikings`        
+    // },2000)
+
+    function Myfunc(){
+        document.querySelector('h3').innerHTML = `Valhalla Vikings`
+    }
+
+    const stopIt = setTimeout(Myfunc, 2000)
+
+    stop.addEventListener('click', (e) => {
+        // alert('This Works')
+        clearTimeout(stopIt)
+        alert("This is stopped")
+    })
+
+    
+</script>
+</html>
